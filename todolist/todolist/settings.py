@@ -122,3 +122,15 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 
 LOGIN_URL = 'login'
+
+# Outil de test pour simuler un envoi de mail externe
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Variables à compléter pour envoyer un mail externe. Il utilise un compte courriel externe
+# Pour l'instant, en test et développement, elles sont en commentaire.
+# Pour la production, il faudra faire des tests avant le déploiement.
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_PORT = 25
+# EMAIL_USE_TLS = True
+# EMAIL_HOST_USER = 'your_gmail_account@gmail.com'
+# EMAIL_HOST_PASSWORD = 'your_gmail_password'
