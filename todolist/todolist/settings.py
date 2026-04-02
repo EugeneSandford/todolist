@@ -140,3 +140,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # EMAIL_HOST_USER = 'your-smtp-username'
 # EMAIL_HOST_PASSWORD = 'your-smtp-password'
 # DEFAULT_FROM_EMAIL = 'noreply@yourdomain.com'
+
+# Gestion des médias
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'

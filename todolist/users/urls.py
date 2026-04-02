@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import MyLoginView, logout_view, RegisterView
+from .views import MyLoginView, logout_view, RegisterView, ProfileView
 from django.contrib.auth.views import ( 
     PasswordResetView, 
     PasswordResetDoneView, 
@@ -9,12 +9,18 @@ from django.contrib.auth.views import (
 
 
 urlpatterns = [
+
+    # Gestion du Profil
+    path('profile/', ProfileView.as_view(), name='profile'),
+
+    # Gestion des login, logout, register et reset de password
     path('login/', 
         MyLoginView.as_view(
             template_name='users/login.html',
             redirect_authenticated_user=True),
         name='login'),
-     # Normalement, la classe Logoutview aurait du être utilisée.
+    
+    # Normalement, la classe LogoutView aurait du être utilisée.
     # Cependant, il y a eu un souci de sécurité critique avec, et
     # du coup, il faut réutiliser les fonctions plutot que les classes.
     #   Voir la fonction logout dans 'views.py' qui fait un logout simple et 

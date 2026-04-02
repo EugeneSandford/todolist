@@ -17,8 +17,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('todo.urls')),
     path('',include('users.urls')),
 ]
+
+# If the DEBUG is True in the settings.py file, 
+# the Django app will serve the media files from MEDIA_URL.
+# 
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)
