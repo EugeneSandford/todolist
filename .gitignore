@@ -7,3 +7,13 @@ __pycache__
 db.sqlite3
 media
 todolist/.env
+
+# L'utilisation des certificats et clés privées permet
+# d'ajouter une couche HTTPS.
+# Ce sont des clés qui sont liées à la machine et donc ne doivent pas
+# être partagées ni avec d'autres machines ni avec quiconque
+# Par conséquent, 
+# il est nécessaire ici d'ignorer tous les certificats et clés privées (locaux)
+*.pem
+*.key
+*.crt

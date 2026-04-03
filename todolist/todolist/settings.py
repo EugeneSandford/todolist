@@ -144,3 +144,11 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # Gestion des médias
 MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = '/media/'
+
+# Gestion des sessions
+# SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'  # Cache + base de données
+# Autres options possibles :
+# 'django.contrib.sessions.backends.db'  # Stockage en base de données (par défaut)
+# 'django.contrib.sessions.backends.cache'  # Stockage en cache
+# 'django.contrib.sessions.backends.file'    # Stockage dans des fichiers
+# 'django.contrib.sessions.backends.cached_db'  # Cache + base de données
