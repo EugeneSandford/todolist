@@ -152,3 +152,5 @@ MEDIA_URL = '/media/'
 # 'django.contrib.sessions.backends.cache'  # Stockage en cache
 # 'django.contrib.sessions.backends.file'    # Stockage dans des fichiers
 # 'django.contrib.sessions.backends.cached_db'  # Cache + base de données
+
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
